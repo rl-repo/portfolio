@@ -10,7 +10,7 @@ var sticky = header.offsetTop;
 
 // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-   if (window.pageYOffset - 50 > sticky) {
+   if (window.pageYOffset > sticky) {
      header.classList.add("sticky");
    } else {
      header.classList.remove("sticky");
@@ -28,7 +28,7 @@ function myFunction() {
    });
  }
  function scrollFunction2() {
-  let e = document.getElementById("exp");
+  let e = document.getElementById("edu");
   e.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
