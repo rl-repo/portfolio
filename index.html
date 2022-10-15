@@ -4,89 +4,260 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Richard Luu Portoflio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="header" id="myHeader">
-            <h2>My Header</h2>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Richard Luu Portoflio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header" id="myHeader">
+        <h2>RL Portfolio</h2>
+        <div class="ulnav">
             <ul>
-                <li><button onclick="scrollFunction1()">About</button></li>
-                <li><button onclick="scrollFunction2()">Education</button></li>
+                <li>
+                    <button onclick="scrollFunction1()">About</button>
+                </li>
+                <li>
+                    <button onclick="scrollFunction2()">Education</button>
+                </li>
+                <li>
+                    <button onclick="scrollFunction3()">Experience</button>
+                </li>
+
                 <li><a href="#skills">Skills</a></li>
                 <li>Interests</li>
             </ul>
-        </div> 
+        </div>
+    </div>
 
-        <div class="body">
+    <div class="body">
 
-            <!-- About --> 
-            <section id="about">
-                <p class="title">About</p>
-                <div class="wrp">
-                    <img class="pfp" src="/img/ava.PNG">
-                    <div class="info">
-                        <p>Richard Luu</p>
-                        <p>An alum from Virginia Tech's <a href="http://google.com/">Computational Modeling & Data Analytics (CMDA)</a> program with interests in data modeling, regression and visualization.</p>
+        <!-- About -->
+        <section id="about">
+            <p class="container-title">About</p>
+            <div class="wrp">
+                <img class="pfp" src="./img/ava.PNG">
+                <div class="info">
+                    <p class="title">Richard Luu</p>
+                    <p>An alum from Virginia Tech's <a href="http://google.com/">Computational Modeling & Data
+                            Analytics (CMDA)</a> program with interests in data modeling, regression and visualization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TEST -->
+        <div class="tempSection">
+            <p class="container-title-test">TEST SECTION</p>
+
+            <div class="section-body">
+                <div class="left-content">
+                    <div class="temp-title">
+                        <p class="title">[TITLE]</p>
+                        <p class="sub">[SUB]</p>
+                    </div>
+                    <div class="main-content">[MAIN]</div>
+                </div>
+
+                <div class="right-content">
+                    [RIGHT]
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EDU REVAMP -->
+
+        <div class="tempSection" id="edu">
+            <p class="container-title-test">Education</p>
+
+            <div class="section-body">
+                <div class="left-content">
+                    <div class="temp-title">
+                        <p class="title">Virginia Polytechnic Institute & State University</p>
+                        <p class="sub">Blacksburg, VA</p>
+                        <p class="sub">B.S. CMDA | Minor: Mathematics | GPA: 3.14</p>
+                    </div>
+                    <div class="main-content">
+                        The CMDA program draws on expertise from three primary departments at Virginia Tech with strengths in quantitative science: Mathematics, Statistics, and Computer Science. By combining elements of these disciplines in innovative, integrated courses that emphasize techniques at the forefront of applied computation, we teach a rich suite of quantitative skills for tackling today's massive data-based problems.
+
                     </div>
                 </div>
-            </section>
 
-            <!-- EXP --> 
-            <section id="edu">
-                <p class="title">Education</p>
-                <div id="edu-content">
-                    <div class="edu-left">
-                        <div class="title"><a href="http://google.com/">Virginia Polytechnic Institute & State University</a></div>
-                        <div>B.S. CMDA | Minor: Mathematics | GPA: 3.14 </div>
-                        <div>
-                        The CMDA program draws on expertise from three primary departments at Virginia Tech with strengths in quantitative science: Mathematics, Statistics, and Computer Science. By combining elements of these disciplines in innovative, integrated courses that emphasize techniques at the forefront of applied computation, we teach a rich suite of quantitative skills for tackling today's massive data-based problems. 
-                        </div>
-                    </div>
+                <div class="right-content">
+                    Aug. 2016 - Dec. 2020
+                </div>
+            </div>
+        </div>
 
-                    <div class="edu-right">
-                    <p>dsdfsdsf</p>
+
+        <!-- EXP REVAMP -->
+        <div class="tempSection">
+            <p class="container-title-test">Experience</p>
+
+            <div class="section-body">
+                <div class="left-content">
+                    <div class="temp-title">
+                        <p class="title">Senior Capstone Team Leader</p>
+                        <p class="sub">Virginia Tech, Blacksburg, VA</p>
                     </div>
+                    <div class="main-content">
+                        <ul>
+                            
+                        <li>
+                            Worked with team from client’s (Anthem Inc.) business intelligence team on health analysis
+                            problem.
+                        </li>
+
+                        <li>
+                            Organized meeting schedules and task delegation for team of peers.
+                        </li>
+
+                        <li>
+                            Communicated with client in form of weekly meetings discussing progress and technical report
+                            updates with visualizations of data (graphs and tables).
+                        </li>
+
+                        <li>
+                            Lead data analysis and interpretation section of research on health levels across Virginia
+                            with regression analysis.
+                        </li>
+
+                        <li>
+                            Developed and created Tableau dashboard with accompanying webpage displaying collected
+                            information.
+                        </li>
+
+                        <li>
+                            Compiled and aggregated data family from variety of sources then cleaned accordingly in R
+                            (dyplr, tidyverse, etc.).
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    Aug. 2020 - Dec. 2020
+                </div>
+            </div>
+        </div>
+
+        <!-- EDU -->
+        <section id="edu">
+            <p class="container-title">Education</p>
+            <div id="edu-content">
+                <div class="edu-left">
+                    <div class="title">
+                        <a href="http://google.com/">Virginia Polytechnic Institute & State University</a>
+                    </div>
+                    <p>B.S. CMDA | Minor: Mathematics | GPA: 3.14 </p>
+                    <p>
+                        The CMDA program draws on expertise from three primary departments at Virginia Tech with strengths in quantitative science: Mathematics, Statistics, and Computer Science. By combining elements of these disciplines in innovative, integrated courses that emphasize techniques at the forefront of applied computation, we teach a rich suite of quantitative skills for tackling today's massive data-based problems.
+                    </p>
+                </div>
+
+                <div class="edu-right">
+                    August 2016 - December 2020
                 </div>
             </div>
 
-            </section>
+        </section>
+
+        <!-- Experience -->
+        <section id="exp">
+            <p class="container-title">Experience</p>
+
+            <div class="exp1">
+                <div class="exp-info">
+                    <p>Team Leader</p>
+                    <p>Senior Capstone Course, Virginia Tech, Blacksburg, VA</p>
+                    <ul id="exp">
+                        <li>
+                            Worked with team from client’s (Anthem Inc.) business intelligence team on health analysis
+                            problem.
+                        </li>
+
+                        <li>
+                            Organized meeting schedules and task delegation for team of peers.
+                        </li>
+
+                        <li>
+                            Communicated with client in form of weekly meetings discussing progress and technical report
+                            updates with visualizations of data (graphs and tables).
+                        </li>
+
+                        <li>
+                            Lead data analysis and interpretation section of research on health levels across Virginia
+                            with regression analysis.
+                        </li>
+
+                        <li>
+                            Developed and created Tableau dashboard with accompanying webpage displaying collected
+                            information.
+                        </li>
+
+                        <li>
+                            Compiled and aggregated data family from variety of sources then cleaned accordingly in R
+                            (dyplr, tidyverse, etc.).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="date-div">August 2020 – December 2020</div>
+            </div>
+
+            <div class="exp1">
+                <div class="exp-info">
+                    <p>Relevant Course Work</p>
+                    <p>Virginia Tech, Blacksburg, VA</p>
+                    <ul>
+                        <li>
+
+                            Researched Ising model simulation and used high performance computing in C / Linux to
+                            visualize results all monitored through Github version controlwith scalability study.
+                        </li>
+
+                        <li>
+                            Wrote logic and database knowledge for Java projects: Towers of Hanoi and Music Database
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="date">August 2016 – December 2020</p>
+
+            </div>
+
+        </section>
+
+        <section id="skills">
+            <p class="title">Edu</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia euismod mauris. Mauris id pulvinar
+                nisl, non mollis nulla. Vestibulum nisl dolor, hendrerit ac fringilla eget, fringilla sed lectus.
+                Curabitur porttitor ligula odio, ut lacinia risus ultricies vel. Maecenas velit ligula, sodales in
+                ornare et, rutrum eget dolor. Mauris at mi at odio elementum interdum. Pellentesque at feugiat enim, nec
+                malesuada tellus. Praesent condimentum volutpat metus, non dignissim nunc luctus nec. Phasellus
+                dignissim mi sed condimentum venenatis. Suspendisse varius tristique elit, eget tristique augue
+                consectetur nec. Nunc scelerisque dolor id porttitor volutpat. Phasellus nec tempus ante. Duis in libero
+                risus. Praesent aliquam egestas dolor sodales faucibus. Mauris blandit magna at malesuada aliquam.</p>
+
+
+        </section>
+
+    </div>
 
 
 
-    
-            <!-- Skills --> 
-            <section id="skills">
-                <p class="title">Skills</p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia euismod mauris. Mauris id pulvinar nisl, non mollis nulla. Vestibulum nisl dolor, hendrerit ac fringilla eget, fringilla sed lectus. Curabitur porttitor ligula odio, ut lacinia risus ultricies vel. Maecenas velit ligula, sodales in ornare et, rutrum eget dolor. Mauris at mi at odio elementum interdum. Pellentesque at feugiat enim, nec malesuada tellus. Praesent condimentum volutpat metus, non dignissim nunc luctus nec. Phasellus dignissim mi sed condimentum venenatis. Suspendisse varius tristique elit, eget tristique augue consectetur nec. Nunc scelerisque dolor id porttitor volutpat. Phasellus nec tempus ante. Duis in libero risus. Praesent aliquam egestas dolor sodales faucibus. Mauris blandit magna at malesuada aliquam.
-                    
-                    Donec dictum erat nulla, non vulputate nibh dignissim vel. Suspendisse mollis erat ac magna lacinia fringilla. Donec feugiat dui eget lacinia suscipit. Curabitur efficitur auctor tellus. Cras id dolor ut sapien cursus suscipit a a purus. Quisque varius luctus felis, et laoreet sem volutpat quis. Praesent arcu velit, vehicula vel erat eget, suscipit facilisis nisl. In hac habitasse platea dictumst. Vivamus id consequat ex, quis venenatis est. Phasellus hendrerit sed lorem vitae consequat. Quisque sed massa egestas, feugiat lectus sed, auctor arcu. Etiam tempus, felis quis consectetur eleifend, est nisi rutrum tellus, vel sagittis tortor nisl ac sem. Nullam eleifend eros urna. 
-                </p>
+    <footer>
+        <h1>FOOTER</h1>
+    </footer>
 
-            </section>
+    <script src="script.js" async defer></script>
+</body>
 
-            <section id="exp">
-                <p class="title">Edu</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia euismod mauris. Mauris id pulvinar nisl, non mollis nulla. Vestibulum nisl dolor, hendrerit ac fringilla eget, fringilla sed lectus. Curabitur porttitor ligula odio, ut lacinia risus ultricies vel. Maecenas velit ligula, sodales in ornare et, rutrum eget dolor. Mauris at mi at odio elementum interdum. Pellentesque at feugiat enim, nec malesuada tellus. Praesent condimentum volutpat metus, non dignissim nunc luctus nec. Phasellus dignissim mi sed condimentum venenatis. Suspendisse varius tristique elit, eget tristique augue consectetur nec. Nunc scelerisque dolor id porttitor volutpat. Phasellus nec tempus ante. Duis in libero risus. Praesent aliquam egestas dolor sodales faucibus. Mauris blandit magna at malesuada aliquam.</p>
-            
-                <p>Donec dictum erat nulla, non vulputate nibh dignissim vel. Suspendisse mollis erat ac magna lacinia fringilla. Donec feugiat dui eget lacinia suscipit. Curabitur efficitur auctor tellus. Cras id dolor ut sapien cursus suscipit a a purus. Quisque varius luctus felis, et laoreet sem volutpat quis. Praesent arcu velit, vehicula vel erat eget, suscipit facilisis nisl. In hac habitasse platea dictumst. Vivamus id consequat ex, quis venenatis est. Phasellus hendrerit sed lorem vitae consequat. Quisque sed massa egestas, feugiat lectus sed, auctor arcu. Etiam tempus, felis quis consectetur eleifend, est nisi rutrum tellus, vel sagittis tortor nisl ac sem. Nullam eleifend eros urna. </p>
-            
-            </section>
-                    
-        </div>
-                    
-            
-        
-        <footer>
-            <h1>FOOTER</h1>
-        </footer>
-        
-        <script src="script.js" async defer></script>
-    </body>
 </html>

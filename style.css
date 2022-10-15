@@ -1,65 +1,55 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
   background-color: #d6d4d0;
 }
- /* Style the header */
- .header {
-    padding: 10px 16px;
-    background: steelblue;
-    color: #f1f1f1;
-    display: flex;
-    justify-content: space-between;
-    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-  
-  }
 
-  
-  
-  /* The sticky class is added to the header with JS when
-   it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .body {
-    padding-top: 100px;
-  } 
-
-
-  ul li:hover {
-	color: yellow;
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: steelblue;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
 }
 
+/* The sticky class is added to the header with JS when
+   it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
 
-ul {
-    display: flex;
-    text-decoration: none;
-    list-style: none;
-    gap: 5px;
-} 
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.body {
+  padding-top: 100px;
+}
+
+div.ulnav > ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 5px;
+}
+
 /* ----- */
 
-
 body {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    gap: 50px;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  gap: 10px;
 }
-
 
 .body {
   display: flex;
@@ -67,28 +57,18 @@ body {
   align-items: center;
 }
 
-
-footer {
-    display: flex;
-    width: 100%;
-    margin-top: auto;
-    background-color: steelblue;
-}
-
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 80%;
+  width: 90%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 10px;
   padding: 10px;
   scroll-margin-top: 60px;
-  color:rgba(0, 0, 0, 0.4);
 }
-
 
 /*
 section:hover {
@@ -96,46 +76,20 @@ section:hover {
 }
 */
 
-
-.title {
+.container-title {
   font-size: 20px;
   font-weight: bold;
+  border-style: solid;
+  border-color: black;
 }
 
-/* --- ABOUT --- */
-
-#about{
-  display: flex;
-}
-
-.info, .edu-left {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 5px;
-}
-
-.pfp {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 25% 0;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.wrp {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+.title {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 
 /* Hover Effect */
-
-section {
-  color: black;
-}
 
 section:after {
   content: '';
@@ -161,3 +115,95 @@ section:hover:after {
   flex-direction: row;
 }
 
+
+/* --- ABOUT --- */
+
+
+.info,
+.edu-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+  border-style: solid;
+}
+
+.edu-right {
+  border-style: solid;
+
+}
+
+.pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 25% 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrp {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* --- EXP --- */
+
+.exp1 {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  justify-content: space-between;
+}
+
+.date {
+  border-style: solid;
+}
+
+.date-div {
+  display: flex;
+  border-style: solid;
+  border-color: red;
+}
+
+/* -------- */
+
+footer {
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+  background-color: steelblue;
+}
+
+
+
+
+
+
+
+/* -------- */
+
+.tempSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+  scroll-margin-top: 60px;
+}
+
+
+.section-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-style: solid;
+
+  background-color: white;
+  color: black;
+}
