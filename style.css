@@ -246,7 +246,7 @@ a {
 #sql, #tableau {
   height: 3em;
   width: 3em;
-  margin-left: 2.5em;
+  margin-left: 3em;
   padding-top: 5px;
 }
 
@@ -270,4 +270,5 @@ a {
   border-style: solid;
   border-radius: 3px;
   margin: 3px;
+  padding: 0 5px;
 }
