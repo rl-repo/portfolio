@@ -68,11 +68,11 @@ section {
   scroll-margin-top: 60px;
 }
 
-/*
+
 .tempSection:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-*/
+
 
 .container-title {
   font-size: 20px;
@@ -132,6 +132,7 @@ section:hover:after {
   object-fit: cover;
   object-position: 25% 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  flex-shrink: 1;
 }
 
 .wrp {
@@ -183,6 +184,22 @@ footer {
   flex-direction: row;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sdoh {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+  margin: 10px;
+}
+
 .left-content {
   display: flex;
   flex-direction: column;
@@ -209,6 +226,7 @@ a {
   font-weight: bold;
 }
 
+/*
 .tempSection:after {
   content: '';
   position: absolute;
@@ -229,6 +247,8 @@ a {
   transform-origin: bottom left;
 }
 
+*/
+
 .skills-icons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -246,7 +266,7 @@ a {
 #sql, #tableau {
   height: 3em;
   width: 3em;
-  margin-left: 3em;
+  margin-left: 3.5em;
   padding-top: 5px;
 }
 
@@ -256,7 +276,9 @@ a {
 }
 
 .thumb {
-  width: 30%;
+  height: 200px;
+  width: 200px;
+  flex-shrink: 2;
   background-color: red;
 }
 
@@ -271,4 +293,8 @@ a {
   border-radius: 3px;
   margin: 3px;
   padding: 0 5px;
+  border-width: 1.5px;
 }
+
+/* Proj Cards */
+
