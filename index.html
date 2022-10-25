@@ -16,8 +16,29 @@
 </head>
 
 <body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Updates</h2>
+          </div>
+          <div class="modal-body">
+            <p>This webpage is still a work in progress.</p>
+            <p>I am working towards updating the style of buttons, projects, and some kerning.</p>
+            <p>Refer to README in repo for other notes.</p>
+          </div>
+        </div>
+      
+      </div>
+
+
     <div class="header" id="myHeader">
-        <h2>RL Portfolio</h2>
+        <div class="left-header">
+            <h2>RL Portfolio</h2>
+            <button class="wip" id="wip">!</button>
+        </div>
         <div class="ulnav">
             <ul>
                 <li>
@@ -41,7 +62,7 @@
 
     <div class="body">
 
-        <!-- About -->
+        <!-- About 
         <section id="about">
             <p class="container-title">About</p>
             <div class="wrp">
@@ -54,6 +75,20 @@
                 </div>
             </div>
         </section>
+    -->
+
+        <div class="tempSection" id="about2">
+            <p class="container-title-test">About</p>
+            <div class="wrp">
+                <img class="pfp" src="img/ava.PNG">
+                <div class="info">
+                    <p class="title">Richard Luu</p>
+                    <p>An alum from Virginia Tech's <a href="https://data.science.vt.edu/programs/cmda.html" class="underline">Computational Modeling & Data Analytics (CMDA)</a> 
+                    program with interests in data modeling, regression and visualization. </p>
+                    <a href="Luu_Richard_Resume_22.pdf" target="_blank">Resume</a>
+                </div>
+            </div>
+        </div>
 
 
         <!-- TEST
@@ -240,10 +275,14 @@
             -->
                 <br>
                 <div class="proj">
-                    <img class="thumb" src="img/Simpsons.png"></img>
+                    <div class="img-wrap">
+                        <img class="thumb" src="img/Simpsons.png"></img>
+                        
+                    </div>
                     <div class="proj-text">
                         <p class="title">Simpsons Episode Analysis</p>
-                        <p class="sub">An analysis conducted on Simpsons episodes data obtained from Kaggle done in R. Highlighting exploratory data analysis, data cleaning, time series study, also a Tableau dashboard.</p>
+                        <p class="sub">An analysis conducted on Simpsons episodes data obtained from Kaggle done in R. 
+                            Highlighting exploratory data analysis, data cleaning, time series study, and soon a Tableau dashboard.</p>
                         <ul class="tags">
                             <li>R</li>
                             <li>ggplot2</li>
@@ -251,9 +290,13 @@
                         </ul>
                     </div>
                 </div>
-                <br>
+                <hr>
+                
                 <div class="proj">
-                    <img class="thumb"></img>
+                    <div class="img-wrap">
+                        <img class="thumb" src="img/iris.png"></img>
+                    
+                    </div>
                     <div class="proj-text">
                         <p class="title">Iris Classification Dashboard</p>
                         <p class="sub">Sample dashboard done in R-Shinny of classic classification data of Iris species.</p>
@@ -267,10 +310,34 @@
             </div>
         </div>
 
+        <!--
+        <div class="tempSection">
+            <p class="container-title-test">PROJECTS CARDS</p>
+            <div class="card">
+                <img src="img/Simpsons.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h4><b>John Doe</b></h4>
+                  <p>Architect & Engineer</p>
+                </div>
+              </div> 
+
+              <br>
+              <div class="card">
+                <img src="img/Simpsons.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h4><b>John Doe</b></h4>
+                  <p>Architect & Engineer</p>
+                </div>
+              </div> 
+
+
+        </div>
+    -->
+
          
 
     <footer>
-         asd
+        ‎
     </footer>
 
     <script src="script.js" async defer></script>
