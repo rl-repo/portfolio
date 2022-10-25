@@ -2,7 +2,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 html {
@@ -285,6 +285,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
 }
 
 
@@ -311,7 +312,8 @@ ul {
 
 .right-content {
   display: flex;
-  margin-left: 5px;
+  padding-right: 15px;;
+  flex-direction: column;
 }
 
 .temp-title {
