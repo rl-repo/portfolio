@@ -20,7 +20,7 @@ function myFunction() {
 
 
 function scrollFunction1() {
-  let e = document.getElementById("about");
+  let e = document.getElementById("about2");
   e.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
