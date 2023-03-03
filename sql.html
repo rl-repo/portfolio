@@ -49,21 +49,21 @@
                         <a class="thumb-wrap" href="https://dbdiagram.io/d">
                             <img class="thumb" src="img/ig-db.png"></img>
                         </a>
-                        <a href src="https://dbdiagram.io/d" class="fig-cap">dbdiagram.io</a></p>
+                        <a href src="https://dbdiagram.io/d" class="fig-cap">dbdiagram.io</a>
                     </div>
                     
                     <div class="proj-text">
                         <div class="title-wrap">
                             <p class="title">Simple Instagram Clone Database Queries</p>
-                            <a href="http://richpluu.shinyapps.io/Iris_Classification">
-                                <i class="fa-solid fa-up-right-from-square"></i>
+                            <a href="ig-clone.sql" download>
+                                <i class="fa-solid fa-file-code"></i>
                             </a>
                         </div>
                         <p class="sub">
                             The database pictured above is a very primitive example of 
                             what an Instagram clone could potentially be. Showing basic 
                             data points to showchase queries and table relationships. 
-                            Created and obtained from Udemy course.
+                            Created and obtained from a Udemy course.
                         </p>
                         
                         
@@ -72,7 +72,7 @@
                                     <pre><code class="language-sql">SELECT 
     username, 
     created_at,
-    CONCAT(TIMESTAMPDIFF(DAY, created_at, NOW()), ' days old') as age
+    CONCAT(TIMESTAMPDIFF(DAY, created_at, NOW()), ' days old') AS age
 FROM users
 ORDER BY created_at
 LIMIT 5;</code></pre> 
@@ -113,10 +113,10 @@ LIMIT 5;</code></pre>
                                 <br>
                                                              
                                 <li>Determining which day of the week is most popular.
-                                    <p>Can also extract day of week in name with <md-span>DAYNAME(created_at)</md-span> instead.</p> 
+                                    Can also extract day of week in name with DAYNAME(created_at) instead.
                                     <pre><code class="language-sql">SELECT 
-    DATE_FORMAT(DATE(created_at), '%W') as day_of_week,
-    COUNT(*) as total
+    DATE_FORMAT(DATE(created_at), '%W') AS day_of_week,
+    COUNT(*) AS total
 FROM users
 GROUP BY DATE_FORMAT(DATE(created_at), '%W')
 ORDER BY total DESC; 
@@ -136,7 +136,7 @@ ORDER BY total DESC;
                                 <br>
 
                                 <li>Find inactive users, defined by zero pictures posted.
-                                    <p>Alternatively, query where photo.id is null.</p>
+                                    Alternatively, query where photo.id is null.
                                     <pre><code class="language-sql">SELECT 
     username,
     image_url 
@@ -207,11 +207,9 @@ LIMIT 5;
                                 </li>
                                 <br>
 
-  
-
-
-                                <li>How many times does an aveage user post? There were multiple ways to approach this e.g. is considered an 'inactive' user -- 0 posts? 0 likes?
-                                    <p>In this instance, simplicity is best. Thus, the query takes into account for all users and all posts.</p>
+                                <li>How many times does an aveage user post? There were multiple ways to approach this e.g. 
+                                    is considered an 'inactive' user -- 0 posts? 0 likes? In this instance, simplicity is 
+                                    best. Thus, the query takes into account for all users and all posts.
                                     <pre><code class="language-sql">SELECT (SELECT COUNT(*) FROM photos) / (SELECT COUNT(*) FROM users) AS avg_post;
 </code></pre> 
     <md-block>
@@ -222,7 +220,11 @@ LIMIT 5;
                                 </li>
                                 <br>
 
-                                <li>Find the top five most common hashtags. An example application of this information is to use these tags in order to increase the chances of your picture to trend through the explore page. However, this data did include ties so the <i>top 5</i> can be extended to top 8.
+                                <li>Find the top five most common hashtags. 
+                                    An example application of this information is to use these tags in
+                                     order to increase the chances of your picture to trend through 
+                                     the explore page. However, this data did include ties so the <i>top 5</i> 
+                                     can be extended to top 8.
                                     <pre><code class="language-sql">SELECT
     tags.tag_name,
     COUNT(*) AS tag_count
@@ -303,6 +305,7 @@ HAVING num_likes = (SELECT Count(*) FROM photos); </code></pre>
     </md-block>
                                 </li>
                                 <br>
+
                                 <!-- Template 
                                 <li>[Query]
                                     <pre><code class="language-sql">SELECT 

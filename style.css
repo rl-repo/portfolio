@@ -422,6 +422,18 @@ hr {
   color: blue;
 }
 
+.fa-file-code {
+  color: black;
+  transition: transform 0.2s ease-in-out;
+  padding-bottom: 1px;
+}
+
+.fa-file-code:hover {
+  transform: translateY(-5px);
+  color: blue;
+}
+
+
 
 .tags {
   display: flex;
