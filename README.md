@@ -15,6 +15,8 @@ Mar 3
 - Syntax higlighting with [PrismJS](https://prismjs.com/index.html)
 - [Table CSS](https://colorlib.com/wp/css3-table-templates/)
 - Rendering markdown on HTML page [a](https://www.makeuseof.com/md-block-render-markdown-web-page/)
+  - Used for tables rather than dedicated HTML tables
+  
 Resource(s):
 - Icons from fontawesome.
 - [Header](https://www.w3schools.com/howto/howto_js_sticky_header.asp)
@@ -22,3 +24,4 @@ Resource(s):
 - [Project Cards](https://csshint.com/css-card-hover-effects/)
     - [Project Cards 2](https://codepen.io/free-source-code-bd/pen/VwpMNoJ)
 - [iFrame](https://stackoverflow.com/questions/23251569/preview-page-on-link-hover)
+

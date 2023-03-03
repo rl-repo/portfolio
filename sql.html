@@ -46,10 +46,12 @@
             <div class="section-body" id="projects">
                 <div class="proj">
                     <div class="img-wrap">
-                        <a class="thumb-wrap" href="">
-                            <img class="thumb" src="" alt="[Schema]"></img>
+                        <a class="thumb-wrap" href="https://dbdiagram.io/d">
+                            <img class="thumb" src="img/ig-db.png"></img>
                         </a>
+                        <a href src="https://dbdiagram.io/d" class="fig-cap">dbdiagram.io</a></p>
                     </div>
+                    
                     <div class="proj-text">
                         <div class="title-wrap">
                             <p class="title">Simple Instagram Clone Database Queries</p>
@@ -110,15 +112,15 @@ LIMIT 5;</code></pre>
                                 </li>
                                 <br>
                                                              
-                                <li>Determining which day of the week is most popular. 
+                                <li>Determining which day of the week is most popular.
+                                    <p>Can also extract day of week in name with <md-span>DAYNAME(created_at)</md-span> instead.</p> 
                                     <pre><code class="language-sql">SELECT 
     DATE_FORMAT(DATE(created_at), '%W') as day_of_week,
     COUNT(*) as total
 FROM users
 GROUP BY DATE_FORMAT(DATE(created_at), '%W')
 ORDER BY total DESC; 
- </code></pre> 
-<table>
+</code></pre> 
     <md-block>
 | day_of_week | total |
 |-------------|-------|
@@ -131,18 +133,187 @@ ORDER BY total DESC;
 | Saturday    |    12 |
     </md-block>
                                 </li>
+                                <br>
+
+                                <li>Find inactive users, defined by zero pictures posted.
+                                    <p>Alternatively, query where photo.id is null.</p>
+                                    <pre><code class="language-sql">SELECT 
+    username,
+    image_url 
+FROM users
+LEFT JOIN photos 
+    ON users.id = photos.user_id
+WHERE image_url IS NULL;
+</code></pre> 
+    <md-block>
+
+        | username            | image_url |
+        |---------------------|-----------|
+        | Aniya_Hackett       | NULL      |
+        | Bartholome.Bernhard | NULL      |
+        | Bethany20           | NULL      |
+        | Darby_Herzog        | NULL      |
+        | David.Osinski47     | NULL      |
+        | Duane60             | NULL      |
+        | Esmeralda.Mraz57    | NULL      |
+        | Esther.Zulauf61     | NULL      |
+        | Franco_Keebler64    | NULL      |
+        | Hulda.Macejkovic    | NULL      |
+        | Jaclyn81            | NULL      |
+        | Janelle.Nikolaus81  | NULL      |
+        | Jessyca_West        | NULL      |
+        | Julien_Schmidt      | NULL      |
+        | Kasandra_Homenick   | NULL      |
+        | Leslie67            | NULL      |
+        | Linnea59            | NULL      |
+        | Maxwell.Halvorson   | NULL      |
+        | Mckenna17           | NULL      |
+        | Mike.Auer39         | NULL      |
+        | Morgan.Kassulke     | NULL      |
+        | Nia_Haag            | NULL      |
+        | Ollie_Ledner37      | NULL      |
+        | Pearl7              | NULL      |
+        | Rocio33             | NULL      |
+        | Tierra.Trantow      | NULL      |
+    </md-block>
+
+<br>
+                                </li>
+                                <br>
+
+                                <li>Pictures/posts with the most likes.
+                                    <pre><code class="language-sql">SELECT
+    image_url,
+    u.username,
+    COUNT(*) AS total_likes
+FROM photos
+JOIN users u 
+    ON u.id = photos.user_id
+JOIN likes 
+    ON likes.photo_id = photos.id
+GROUP BY photos.id
+ORDER BY total_likes DESC
+LIMIT 5; 
+ </code></pre> 
+    <md-block>
+        | image_url              | username        | total_likes |
+        |------------------------|-----------------|-------------|
+        | jarret.name    | Zack_Kemmer93   |          48 |
+        | celestine.name | Malinda_Streich |          43 |
+        | dorcas.biz     | Adelle96        |          43 |
+        | shannon.org     | Seth46          |          42 |
+        | dejon.name     | Delpha.Kihn     |          41 |
+    </md-block>
+                                </li>
+                                <br>
+
+  
 
 
+                                <li>How many times does an aveage user post? There were multiple ways to approach this e.g. is considered an 'inactive' user -- 0 posts? 0 likes?
+                                    <p>In this instance, simplicity is best. Thus, the query takes into account for all users and all posts.</p>
+                                    <pre><code class="language-sql">SELECT (SELECT COUNT(*) FROM photos) / (SELECT COUNT(*) FROM users) AS avg_post;
+</code></pre> 
+    <md-block>
+        | avg_post |
+        |----------|
+        |   2.5700 |
+    </md-block>
+                                </li>
+                                <br>
 
-                                                             
+                                <li>Find the top five most common hashtags. An example application of this information is to use these tags in order to increase the chances of your picture to trend through the explore page. However, this data did include ties so the <i>top 5</i> can be extended to top 8.
+                                    <pre><code class="language-sql">SELECT
+    tags.tag_name,
+    COUNT(*) AS tag_count
+FROM photo_tags
+JOIN tags 
+    ON photo_tags.tag_id = tags.id
+GROUP BY tags.id
+ORDER BY tag_count DESC
+LIMIT 5;</code></pre>
+<md-block>
+    | tag_name | tag_count |
+    |----------|-----------|
+    | smile    |        59 |
+    | beach    |        42 |
+    | party    |        39 |
+    | fun      |        38 |
+    | concert  |        24 |
+</md-block></li>
+                                <br>
+                                <li>Since social media is riddled with bots, 
+                                    this query finds which users are bots that likes all user posts. 
+                                    There are two approaches shown below.
+<pre><code class="language-sql">SELECT * 
+FROM (
+    SELECT 
+        user_id,
+        username,
+        CASE
+            WHEN COUNT(*) = (SELECT COUNT(*) FROM photos) THEN 1
+            ELSE 0
+        END as bot_status
+        FROM likes
+        JOIN users ON users.id = likes.user_id
+        GROUP BY user_id) AS temp
+WHERE temp.bot_status = 1;</code></pre> 
+<md-block>
+| user_id | username           | bot_status |
+|---------|--------------------|------------|
+|       5 | Aniya_Hackett      |          1 |
+|      91 | Bethany20          |          1 |
+|      54 | Duane60            |          1 |
+|      14 | Jaclyn81           |          1 |
+|      76 | Janelle.Nikolaus81 |          1 |
+|      57 | Julien_Schmidt     |          1 |
+|      75 | Leslie67           |          1 |
+|      24 | Maxwell.Halvorson  |          1 |
+|      41 | Mckenna17          |          1 |
+|      66 | Mike.Auer39        |          1 |
+|      71 | Nia_Haag           |          1 |
+|      36 | Ollie_Ledner37     |          1 |
+|      21 | Rocio33            |          1 |
+</md-block>
+ <pre><code class="language-sql">SELECT
+	username, 
+	COUNT(*) AS num_likes 
+FROM users 
+INNER JOIN likes 
+	ON users.id = likes.user_id 
+GROUP BY likes.user_id 
+HAVING num_likes = (SELECT Count(*) FROM photos); </code></pre>
+    <md-block>
+| username           | num_likes |
+|--------------------|-----------|
+| Aniya_Hackett      |       257 |
+| Bethany20          |       257 |
+| Duane60            |       257 |
+| Jaclyn81           |       257 |
+| Janelle.Nikolaus81 |       257 |
+| Julien_Schmidt     |       257 |
+| Leslie67           |       257 |
+| Maxwell.Halvorson  |       257 |
+| Mckenna17          |       257 |
+| Mike.Auer39        |       257 |
+| Nia_Haag           |       257 |
+| Ollie_Ledner37     |       257 |
+| Rocio33            |       257 |
+
+    </md-block>
+                                </li>
+                                <br>
+                                <!-- Template 
                                 <li>[Query]
                                     <pre><code class="language-sql">SELECT 
  </code></pre> 
-<table>
     <md-block>
-        [Table]
+
     </md-block>
                                 </li>
+                                <br>
+                                -->
+
 
                             </ul>
                           
@@ -158,9 +329,9 @@ ORDER BY total DESC;
         ‎
     </footer>
 
-    <script src="js/prism.js"></script>
     <script src="script.js" async defer></script>
-     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="js/prism.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
  
  
 </body>

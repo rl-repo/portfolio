@@ -458,3 +458,8 @@ hr {
 		text-align:left;
 		padding:5px;
 	}
+
+.fig-cap {
+  font-size: 11px;
+  color: #d1cfcf83;
+}
