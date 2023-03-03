@@ -10,9 +10,15 @@ TODOS:
     - Change image layouts to float
     - Current column view occupies too much space
 
-Resources:
+Mar 3
+- Added SQL snippets
+- Syntax higlighting with [PrismJS](https://prismjs.com/index.html)
+- [Table CSS](https://colorlib.com/wp/css3-table-templates/)
+- Rendering markdown on HTML page [a](https://www.makeuseof.com/md-block-render-markdown-web-page/)
+Resource(s):
 - Icons from fontawesome.
 - [Header](https://www.w3schools.com/howto/howto_js_sticky_header.asp)
 - [Image Formatting](https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit)
 - [Project Cards](https://csshint.com/css-card-hover-effects/)
     - [Project Cards 2](https://codepen.io/free-source-code-bd/pen/VwpMNoJ)
+- [iFrame](https://stackoverflow.com/questions/23251569/preview-page-on-link-hover)

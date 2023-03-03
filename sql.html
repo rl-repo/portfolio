@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SQL</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/prism.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/d22460e4b2.js" crossorigin="anonymous"></script>
+
+ 
+</head>
+
+<body>
+    <div class="header" id="myHeader">
+        <div class="left-header">
+            <h2>RL Portfolio</h2>
+        </div>
+        <div class="ulnav">
+            <ul>
+                <li>
+                    <form action="index.html">
+                        <button type="submit">
+                            Home
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="tempSection" id="projs">
+            <p class="container-title-test">SQL Samples</p>
+            
+            <hr>
+            
+            <div class="section-body" id="projects">
+                <div class="proj">
+                    <div class="img-wrap">
+                        <a class="thumb-wrap" href="">
+                            <img class="thumb" src="" alt="[Schema]"></img>
+                        </a>
+                    </div>
+                    <div class="proj-text">
+                        <div class="title-wrap">
+                            <p class="title">Simple Instagram Clone Database Queries</p>
+                            <a href="http://richpluu.shinyapps.io/Iris_Classification">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p class="sub">
+                            The database pictured above is a very primitive example of 
+                            what an Instagram clone could potentially be. Showing basic 
+                            data points to showchase queries and table relationships. 
+                            Created and obtained from Udemy course.
+                        </p>
+                        
+                        
+                            <ul>
+                                <li>Getting five oldest users.
+                                    <pre><code class="language-sql">SELECT 
+    username, 
+    created_at,
+    CONCAT(TIMESTAMPDIFF(DAY, created_at, NOW()), ' days old') as age
+FROM users
+ORDER BY created_at
+LIMIT 5;</code></pre> 
+<table>
+    <md-block>
+        | username         | created_at          | age           |
+        |------------------|---------------------|---------------|
+        | Darby_Herzog     | 2016-05-06 00:14:21 | 2492 days old |
+        | Emilio_Bernier52 | 2016-05-06 13:04:30 | 2492 days old |
+        | Elenor88         | 2016-05-08 01:30:41 | 2490 days old |
+        | Nicole71         | 2016-05-09 17:30:22 | 2488 days old |
+        | Jordyn.Jacobson2 | 2016-05-14 07:56:26 | 2484 days old |
+    </md-block>
+    <!-- 
+    <table id="sql-tab">
+        <thead>
+        <tr>
+            <th>username</th>
+            <th>created_at</th>
+            <th>age</th>
+            <th>Header 4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>apu</td>
+            <td>apu</td>
+            <td>apu</td>
+            <td>apu</td>
+        </tr>
+
+        </tbody>
+    </table>
+    -->
+    
+            
+                                </li>
+                                <br>
+                                                             
+                                <li>Determining which day of the week is most popular. 
+                                    <pre><code class="language-sql">SELECT 
+    DATE_FORMAT(DATE(created_at), '%W') as day_of_week,
+    COUNT(*) as total
+FROM users
+GROUP BY DATE_FORMAT(DATE(created_at), '%W')
+ORDER BY total DESC; 
+ </code></pre> 
+<table>
+    <md-block>
+| day_of_week | total |
+|-------------|-------|
+| Thursday    |    16 |
+| Sunday      |    16 |
+| Friday      |    15 |
+| Tuesday     |    14 |
+| Monday      |    14 |
+| Wednesday   |    13 |
+| Saturday    |    12 |
+    </md-block>
+                                </li>
+
+
+
+                                                             
+                                <li>[Query]
+                                    <pre><code class="language-sql">SELECT 
+ </code></pre> 
+<table>
+    <md-block>
+        [Table]
+    </md-block>
+                                </li>
+
+                            </ul>
+                          
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+        
+    <footer>
+        ‎
+    </footer>
+
+    <script src="js/prism.js"></script>
+    <script src="script.js" async defer></script>
+     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+ 
+ 
+</body>
+
+</html>

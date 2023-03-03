@@ -85,6 +85,7 @@ html {
 .header {
   padding: 10px 16px;
   background: steelblue;
+  z-index: 2;
   color: #f1f1f1;
   display: flex;
   justify-content: space-between;
@@ -435,3 +436,25 @@ hr {
   padding: 2px 5px;
   border-width: 1.5px;
 }
+
+/* Table */
+
+#sql-tab {
+  border:1px solid;
+	border-collapse:collapse;
+	padding:5px;
+}
+
+#sql-tab th {
+  border:1px solid;
+  padding:5px;
+  color: white;
+  border-color: black;
+  background: #358ccb;
+}
+
+#sql-tab td {
+		border:1px solid;
+		text-align:left;
+		padding:5px;
+	}
