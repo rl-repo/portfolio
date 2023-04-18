@@ -16,6 +16,9 @@ Mar 3
 - [Table CSS](https://colorlib.com/wp/css3-table-templates/)
 - Rendering markdown on HTML page [a](https://www.makeuseof.com/md-block-render-markdown-web-page/)
   - Used for tables rather than dedicated HTML tables
+
+Mar 7
+- Separate page added for dashboards
   
 Resource(s):
 - Icons from fontawesome.
