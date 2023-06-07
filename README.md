@@ -36,3 +36,8 @@ Resource(s):
 Apr 18
 
 - Added JS snippets
+
+Jun 7
+
+- Added web dev projects
+- Removed Tableau icon due lack of permission.

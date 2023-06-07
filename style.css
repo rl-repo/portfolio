@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   font-size: 15px;
 }
@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
   background-color: #d6d4d0;
 }
-
 
 /* The Modal (background) */
 .modal {
@@ -22,8 +21,8 @@ html {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -34,22 +33,34 @@ html {
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /* The Close Button */
@@ -73,7 +84,9 @@ html {
   color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
 
 .modal-footer {
   padding: 2px 16px;
@@ -101,11 +114,11 @@ h2 {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky+.body {
+.sticky + .body {
   padding-top: 100px;
 }
 
@@ -165,11 +178,9 @@ section {
   scroll-margin-top: 60px;
 }
 
-
 .tempSection:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 .container-title {
   font-size: 20px;
@@ -182,11 +193,10 @@ section {
   font-weight: bold;
 }
 
-
 /* Hover Effect */
 
 section:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -209,9 +219,7 @@ section:hover:after {
   flex-direction: row;
 }
 
-
 /* --- ABOUT --- */
-
 
 .info,
 .edu-left {
@@ -220,7 +228,6 @@ section:hover:after {
   gap: 5px;
   margin-top: 5px;
 }
-
 
 .pfp {
   width: 150px;
@@ -261,7 +268,7 @@ footer {
   scroll-margin-top: 60px;
 }
 
-.container-title-test{
+.container-title-test {
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -289,12 +296,9 @@ footer {
   margin-right: 20px;
 }
 
-
 ul {
   list-style: "↪ ";
 }
-
-
 
 .sdoh {
   display: flex;
@@ -308,12 +312,12 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 200%
+  width: 200%;
 }
 
 .right-content {
   display: flex;
-  padding-right: 15px;;
+  padding-right: 15px;
   flex-direction: column;
 }
 
@@ -354,11 +358,25 @@ a {
 
 */
 
+.skill-icons2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+
 .skills-icons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
+}
+
+.skillIcon {
+  display: flex;
+  justify-content: center;
 }
 
 #skills {
@@ -368,7 +386,8 @@ a {
   margin-bottom: 5px;
 }
 
-#sql, #tableau {
+#sql,
+#tableau {
   height: 3em;
   width: 3em;
   margin-left: 4.5em;
@@ -394,7 +413,6 @@ a {
   align-items: center;
 }
 
-
 hr {
   width: 100%;
 }
@@ -405,35 +423,26 @@ hr {
   width: 70%;
 }
 
-.img-wrap a{
+.img-wrap a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fa-up-right-from-square {
+.fa-up-right-from-square,
+.fa-file-code,
+.fa-github {
   color: black;
   transition: transform 0.2s ease-in-out;
   padding-bottom: 1px;
 }
 
-.fa-up-right-from-square:hover {
+.fa-up-right-from-square:hover,
+.fa-file-code:hover,
+.fa-github:hover {
   transform: translateY(-5px);
   color: blue;
 }
-
-.fa-file-code {
-  color: black;
-  transition: transform 0.2s ease-in-out;
-  padding-bottom: 1px;
-}
-
-.fa-file-code:hover {
-  transform: translateY(-5px);
-  color: blue;
-}
-
-
 
 .tags {
   display: flex;
@@ -452,24 +461,24 @@ hr {
 /* Table */
 
 #sql-tab {
-  border:1px solid;
-	border-collapse:collapse;
-	padding:5px;
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 5px;
 }
 
 #sql-tab th {
-  border:1px solid;
-  padding:5px;
+  border: 1px solid;
+  padding: 5px;
   color: white;
   border-color: black;
   background: #358ccb;
 }
 
 #sql-tab td {
-		border:1px solid;
-		text-align:left;
-		padding:5px;
-	}
+  border: 1px solid;
+  text-align: left;
+  padding: 5px;
+}
 
 .fig-cap {
   font-size: 11px;
