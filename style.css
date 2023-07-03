@@ -429,6 +429,10 @@ hr {
   align-items: center;
 }
 
+.img-wrap p {
+  text-align: center;
+}
+
 .fa-up-right-from-square,
 .fa-file-code,
 .fa-github {
